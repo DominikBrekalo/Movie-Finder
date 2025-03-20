@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%; 
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #f8f8f8;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #1f1f1f;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 500px;
+    justify-content: space-between;
+}
+
+.search-input {
+    flex-grow: 1;
+    font-size: 1rem;
+    padding: 0.6em;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #2a2a2a;
+    color: white;
+    padding-left: 15px;
+}
+
+.search-input::placeholder {
+    color: #b0b0b0;
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+.load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(7, 134, 134);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 2px #636161;
+}
+
+.load-more-btn:hover {
+    background-color: #006f6f;
+}
+
+.hidden {
+    display: none;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%; 
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.movie-card {
+    text-align: center;
+}
+
+.movie-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-image:hover {
+    transform: scale(1.05);
+}
+
+.movie-title {
+    color: white;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.no-results {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 580px) {
+    img {
+        height: 350px;
+    }
+    .image-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
